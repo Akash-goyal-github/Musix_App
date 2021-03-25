@@ -1,0 +1,132 @@
+.search-container {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.card-container {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.mat-typography {
+    background-color: #000000;
+}
+
+.mat-toolbar {
+    background-color: #000000de;
+    
+}
+.mat-toolbar span {
+    color: #ffffff;
+}
+.noteCard{
+    width:20vw;
+    margin:20px;
+    border:2px solid rgb(207, 143, 233);
+    display: flex;
+    flex-direction: column;
+}
+.card-container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+mat-card{
+    margin: 40px;
+    padding:20px;
+    position: relative;
+    border-radius: 11px;
+    width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+mat-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.icon-actions{
+    position: relative;
+    cursor: pointer;
+}
+.icon-edit{
+    position: absolute;
+    bottom: 35px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.form-control{
+    color: cornsilk;
+    padding: 10px;
+    margin: 10px;
+    width:25vw;
+    color:black;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    border-radius: 11px;
+}
+
+.material-icons{
+    color: rgb(92, 85, 99); 
+  }
+
+  /* mat-card{
+      background-image: url("https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg");
+      
+   filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  height: 100%; 
+  } */
+
+  .song-delete{
+    text-align: justify;  /* For Edge */
+    text-align-last: right;
+    padding: 5px;
+    margin: 5px;
+    
+  }
+  mat-accordion{
+      margin: 10px;
+  }
+  .song-center{
+    text-align: justify;  /* For Edge */
+    text-align: center;
+    padding: 5px;
+  }
+  h1{
+      text-align: center;
+  }
+
+  .divif{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 150px;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .but2 {
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: x-large;
+    color: #fff;
+    background-color: #6a2dc6;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+  }
+  .but2:hover{
+    cursor: pointer;
+  }

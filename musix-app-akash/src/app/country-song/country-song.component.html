@@ -1,0 +1,97 @@
+<app-main-nav>
+<h1>Country Favourites</h1>
+
+<!-- search bar -->
+
+
+<div class="search-container">
+  <nav class="navbar">
+    <input class='search-option' matInput type="text" name="searching" [(ngModel)]="searching" (ngModelChange)="passQueryString()"
+    placeholder="Search Artist">
+  </nav>
+</div>
+
+<div style="float: right;">
+  
+<select class='select-option' #mySelect (change)='onOptionsSelected(mySelect.value)'>
+  <option selected disabled hidden>Select Country</option>
+
+   <option class='option' *ngFor="let country of countrybycode" [value]="country.code">{{country.name}}</option>
+</select>
+</div>
+
+
+
+
+<!-- Card view -->
+<div class="card-container">
+    <mat-card *ngFor="let music of music?.results; let index = index">
+        <h3>{{music.trackName}}</h3>
+        <mat-divider></mat-divider>
+        <!-- <br>
+        <h4>{{music.country}}</h4> -->
+        <mat-icon class="song-delete">star</mat-icon>
+        <mat-accordion>
+            
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title class="song-center">
+                   Artist
+                </mat-panel-title>
+                <mat-panel-description class="song-center">
+                    {{music.artistName}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <img mat-card-img [src]="music.artworkUrl100">
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="song-center">
+                    Album
+                </mat-panel-title>
+                <mat-panel-description class="song-center">
+                    {{ music.collectionName }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-card-content>
+                 <audio controls [id]="index">
+            <source [src]="music.previewUrl" type="audio/ogg">
+            <source [src]="music.previewUrl" type="audio/mpeg">
+        </audio>
+                <div class="card-details">
+                   <p>Genre: {{ music.primaryGenreName }} </p>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <div class="divif" *ngIf="isLoggedin; else elsecomment">
+
+                <span class="icon-edit" routerLink="/comment"><mat-icon (click)="passvaluetocomment(music.trackName,music.trackId,music.artworkUrl100)">mode_edit</mat-icon></span>
+                 
+    
+          </div>
+    
+          <ng-template #elsecomment>
+    
+            <span class="icon-edit"><mat-icon (click)="askingtocomment()">mode_edit</mat-icon></span>
+                 
+    
+          </ng-template>
+           
+            </mat-card-actions>
+           
+            </mat-expansion-panel>
+
+          </mat-accordion>
+          
+          <br>
+          <br>
+          
+          <button #playBtn mat-flat-button color="primary" (click)="playSong(music)">PLAY</button>
+            <button #stopBtn mat-button color="primary" (click)="stopSong(music)">STOP</button>
+           
+       
+    </mat-card> 
+
+</div>
+</app-main-nav>

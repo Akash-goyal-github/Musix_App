@@ -1,0 +1,109 @@
+<app-main-nav>
+<div class="container mt-5">
+  <div class="d-flex justify-content-center row">
+      <div class="col-md-6">
+          <div class="bg-white comment-section">
+              <div class="d-flex flex-row user p-2"><img class="rounded-circle" [src]="trackpassdata.trackImage" width="50">
+                  <div class="d-flex flex-column ml-2"><span class="name font-weight-bold">Track: {{trackpassdata.trackname}}</span></div>
+              </div>
+              <mat-divider class="divider"></mat-divider>
+              <div class="mt-2 p-2">
+                  <p class="comment-content">Want to say something about this song..?</p>
+              </div>
+              <div onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="comment_icon d-flex justify-content-between p-3 border-top">
+                <span>Leave a comment</span>
+               
+                <span class="icon-edit"><mat-icon onclick="document.getElementById('id01').style.display='block'" style="width:auto;">mode_edit</mat-icon></span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span class="name font-weight-bold">Track: {{trackpassdata.trackname}}</span>
+    </div>
+
+    <div class="container">
+        <label>Your Name: </label>
+
+      <input class="form-control" matInput type="text" name="com" [(ngModel)]="commenter_name" required>
+   
+        <br>
+        <br>
+      <label for="com"><b>Comment</b></label>
+    <!-- <input type="text" placeholder="Enter comment" name="com" required> -->
+      <input class="form-control" matInput type="text" name="com" [(ngModel)]="comment_text" placeholder="Enter Comment" required>
+   
+      <button type="submit" (click)="submitComment()" onclick="document.getElementById('success').style.display='block'">Submit Your Comment</button>
+
+      <label class="error-message">{{ errMessage }}</label>
+      <br>
+      <br>
+      <label class="successMessage">{{ successMessage }}</label>
+      
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <input type="reset" onclick="document.getElementById('id01').style.display='none'" (click)="cancelComment()" class="cancelbtn" value="Cancel"/>
+      <!-- <button type="reset" onclick="document.getElementById('id01').style.display='block'" class="cancelbtn">Cancel</button> -->
+    </div>
+
+    <br>
+    <br>
+    
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<div class="row d-flex justify-content-center mt-100 mb-100">
+  <div class="col-lg-6">
+      <div class="card">
+          <div class="card-body text-center">
+              <h3 class="card-title">Latest Comments</h3>
+          </div>
+          <div class="comment-widgets" *ngFor="let comment of showcomments">
+              <!-- Comment Row -->
+              <!-- <div class="d-flex flex-row comment-row m-t-0">
+                  <div class="p-2"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583336/AAA/4.jpg" alt="user" width="50" class="rounded-circle"></div>
+                  <div class="comment-text w-100">
+                      <h6 class="font-medium">James Thomas</h6> <span class="m-b-15 d-block">This is awesome website. I would love to comeback again. </span>
+                      <div class="comment-footer"> <span class="text-muted float-right">April 14, 2019</span></div>
+                  </div>
+              </div> Comment Row -->
+              <div class="d-flex flex-row comment-row">
+                  <!-- <div class="p-2"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583319/AAA/3.jpg" alt="user" width="50" class="rounded-circle"></div> -->
+                  <div class="comment-text active w-100">
+                      <h4 class="font-medium">{{comment.name}}</h4> <span class="m-b-15 d-block">{{comment.comment}}</span>
+                      
+                  </div>
+              </div> <!-- Comment Row -->
+              <!-- <div class="d-flex flex-row comment-row">
+                  <div class="p-2"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg" alt="user" width="50" class="rounded-circle"></div>
+                  <div class="comment-text w-100">
+                      <h6 class="font-medium">Johnathan Doeting</h6> <span class="m-b-15 d-block">Great industry leaders are not the real heroes of stock market. </span>
+                      <div class="comment-footer"> <span class="text-muted float-right">August 1, 2019</span></div>
+                  </div>
+              </div> -->
+          </div> <!-- Card -->
+      </div>
+  </div>
+</div>
+</app-main-nav>

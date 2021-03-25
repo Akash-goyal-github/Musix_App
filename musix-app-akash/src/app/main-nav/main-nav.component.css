@@ -1,0 +1,90 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px grey;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.example-icon {
+  flex: 1 1 auto;
+text-align: end;
+}
+
+.material-icons.home:focus{
+
+  flex: 1 1 auto;
+  text-align: end;
+  outline: none;
+}
+
+.material-icons.home{
+
+  flex: 1 1 auto;
+  text-align: end;
+}
+
+.material-icons.deeppurple { color: rgb(73, 35, 113); }
+
+.img-responsive.img-size{
+  width: 175px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 1px solid rgb(73, 35, 113);
+}
+.material-icons.edit{
+  color: rgb(73, 35, 113); 
+}
+li{
+  cursor: pointer;
+}
+
+.material-icons, .musix{
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+
+.home:hover + .hide {
+  display: block;
+  color: white;
+}
+
+.home{
+  width: 15vw;
+}
+.but2{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  font-size: large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hide {
+  display: block;
+  cursor: pointer;
+
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: white;
+  cursor: pointer;
+}
