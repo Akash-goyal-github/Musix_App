@@ -1,10 +1,27 @@
+ <h1 align="center"> Musix-App :boom::100:</h1>
+
+
+ <p align="center">
+  
+Who doesn't appreciate good music? 🌓
+
+- Musix-App is a platform where you can browse nonstop tunes around the world. The platform is very easy to use for people from all walks of life and of any age. They can search music by album/ by artist or by country. 
+
+- Login/registration is required only if the ywant to see recommendations or add songs to favorites.
+ 
+  </p>
+
+
+
+---
+
 This project was generated with Angular CLI: 11.2.1. We used itunes API to fetch the data.
 Source:https://developer.apple.com/develop/
 
 Objective:
 1. Enabling the user to play music artist-wise, album-wise and country-wise.
 2. Enabling the user to save their favourites by signing in.
-3. User can also reccomend songs and access the list of songs reccomended by others by logging in.
+3. User can also recommend songs and access the list of songs reccomended by others by logging in.
 4. User can access the video links of music from different genres.
 5. User can add comments to the songs.
 6. User can logout.
