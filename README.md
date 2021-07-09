@@ -7,7 +7,7 @@ Who doesn't appreciate good music? :zany_face:
 
 - Musix-App is a platform where you can browse nonstop tunes around the world. :heart_eyes: The platform is very easy to use for people from all walks of life and of any age. They can search music by album/ by artist or by country. :partying_face: :gift_heart: 
 
-- Login/registration is required only if the ywant to see recommendations or add songs to favorites. :100: :boom:
+- Login/registration is required only if the you want to see recommendations or add songs to favorites. :100: :boom:
  
   </p>
 
